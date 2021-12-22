@@ -122,18 +122,3 @@ class PulseClient:
         """Close network connections"""
         self._user.close()
         self._post.close()
-
-
-with PulseClient() as pulse:
-    user_info = pulse.get_user_info("finvestpaper")
-    print(user_info)
-
-    user_posts = pulse.get_posts_by_user_id(user_info["id"])
-    print(user_posts)
-    print(
-        pulse.get_posts_by_user_id(
-            user_id=user_info["id"], cursor=user_posts["nextCursor"]
-        )
-    )
-
-    print(pulse.get_posts_by_ticker("AAPL"))
