@@ -22,10 +22,9 @@
 
 ## Installation
 ```shell
-pip install tpulse
+pip install tpulse httpx fake_useragent
 ```
 
-<! -- [tool.flit.metadata] -->
 
 ## Usage example
 
