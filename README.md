@@ -22,7 +22,7 @@
 
 ## Installation
 ```shell
-pip install tpulse httpx fake_useragent
+pip install tpulse
 ```
 
 
