@@ -16,7 +16,7 @@
 [build-url]: https://github.com/meanother/tpulse-py/actions/workflows/build.yml
 [coverage-image]: https://codecov.io/gh/meanother/tpulse-py/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/nameanotherlgeon/tpulse-py
-[quality-image]: https://api.codeclimate.com/v1/badges/3130fa0ba3b7993fbf0a/maintainability
+[quality-image]: https://api.codeclimate.com/v1/badges/ca8f259b0ad93f1f28ed/maintainability
 [quality-url]: https://codeclimate.com/github/meanother/tpulse-py
 
 
@@ -29,11 +29,11 @@ pip install tpulse httpx fake_useragent
 ## Usage example
 
 ```python
-from tpulse import PulseClient
+from tpulse import TinkoffPulse
 from pprint import pp
 
 
-with PulseClient() as pulse:
+with TinkoffPulse() as pulse:
     user_info = pulse.get_user_info("finvestpaper")
     pp(user_info)
     
