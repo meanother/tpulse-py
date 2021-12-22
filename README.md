@@ -1,11 +1,12 @@
 # tpulse-py
 
+> Tinkoff social pulse [api](https://www.tinkoff.ru/api/invest-gw/social/v1/) wrapper  
+
 [![PyPI Version][pypi-image]][pypi-url]
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Code Quality][quality-image]][quality-url]
 
-...
 
 <!-- Badges -->
 
@@ -17,3 +18,30 @@
 [coverage-url]: https://codecov.io/gh/nameanotherlgeon/tpulse-py
 [quality-image]: https://api.codeclimate.com/v1/badges/3130fa0ba3b7993fbf0a/maintainability
 [quality-url]: https://codeclimate.com/github/meanother/tpulse-py
+
+
+## Installation
+```shell
+pip install tpulse
+```
+
+<! -- [tool.flit.metadata] -->
+
+## Usage example
+
+```python
+from tpulse import PulseClient
+from pprint import pp
+
+
+with PulseClient() as pulse:
+    user_info = pulse.get_user_info("finvestpaper")
+    pp(user_info)
+    
+    user_posts = pulse.get_posts_by_user_id(user_info["id"])
+    pp(user_posts)
+    
+    ticker_posts = pulse.get_posts_by_ticker("AAPL")
+    pp(ticker_posts)
+
+```

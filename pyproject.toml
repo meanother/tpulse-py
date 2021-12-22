@@ -6,11 +6,13 @@ build-backend = "flit_core.buildapi"
 name = "tpulse"
 authors = [{name = "Semenov Artur", email = "juicehq@yandex.ru"}]
 license = {file = "LICENSE"}
+home-page = "https://github.com/meanother/tpulse-py"
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 description-file = "README.md"
 requires-python = ">=3.7"
 requires = [ "httpx", "fake_useragent"]
+install_requires = [ "httpx", "fake_useragent"]
 
-[project.urls]
-Home = "https://github.com/meanother/tpulse-py"
+# [project.urls]
+# Home = "https://github.com/meanother/tpulse-py"
