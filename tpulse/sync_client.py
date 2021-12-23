@@ -57,7 +57,6 @@ class UserClient(ClientBase):
         url = "profile/nickname/%s" % name
         response = self._get(url, data=None)
         return response["payload"] if response["status"] == "Ok" else None
-        # return response
 
     def user_posts(self, user_id: str, cursor: int, **kwargs) -> Optional[Dict]:
         """get user posts by user id"""
