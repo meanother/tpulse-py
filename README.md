@@ -6,7 +6,8 @@
 [![Build Status][build-image]][build-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Code Quality][quality-image]][quality-url]
-
+[![Downloads](https://pepy.tech/badge/tpulse)](https://pepy.tech/project/tpulse)
+[![Downloads](https://pepy.tech/badge/tpulse/month)](https://pepy.tech/project/tpulse)
 
 <!-- Badges -->
 
