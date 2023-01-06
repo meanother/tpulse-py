@@ -3,10 +3,14 @@ from typing import Dict, Optional
 
 import httpx
 from fake_useragent import UserAgent
+from fake_useragent.errors import FakeUserAgentError
 
 from tpulse import settings
 
-ua = UserAgent().random
+try:
+    ua = UserAgent().random
+except (IndexError, FakeUserAgentError):
+    ua = settings.USER_AGENT
 
 
 class ClientBase:
