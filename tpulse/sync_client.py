@@ -41,12 +41,6 @@ class ClientBase:
         response.raise_for_status()
         return response.json()
 
-    def _post(self, url, data, timeout=settings.TIMEOUT_SEC):
-        """POST request to Dadata API"""
-        response = self._client.post(url, json=data, timeout=timeout)
-        response.raise_for_status()
-        return response.json()
-
 
 class UserClient(ClientBase):
     """User class for tpulse api"""

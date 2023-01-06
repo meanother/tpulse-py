@@ -14,6 +14,11 @@ headers = {
 }
 
 
+def test_ua():
+    assert type(ua) == str
+    assert len(ua) > 1
+
+
 def test_init_user():
     user = UserClient()
     assert user._client.headers["Content-type"] == "application/json"
